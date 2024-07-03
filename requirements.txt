@@ -1,7 +1,0 @@
-pyodbc
-passlib
-argon2_cffi
-kivy
-azure-storage-blob
-Flask==2.0.1
-Werkzeug==2.0.1
