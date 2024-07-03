@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Modificar Toda la Información{% endblock %}
+
+{% block content %}
+<h2>Modificar Toda la Información</h2>
+<form method="POST" action="{{ url_for('inventory.modify_all') }}">
+    <input type="email" name="new_email" placeholder="Nuevo Correo Electrónico" required>
+    <input type="password" name="new_password" placeholder="Nueva Contraseña" required>
+    <input type="password" name="confirm_new_password" placeholder="Confirmar Nueva Contraseña" required>
+    <input type="text" name="new_first_name" placeholder="Nuevo Nombre" required>
+    <input type="text" name="new_last_name1" placeholder="Nuevo Primer Apellido" required>
+    <input type="text" name="new_last_name2" placeholder="Nuevo Segundo Apellido" required>
+    <button type="submit">Actualizar</button>
+</form>
+<a href="{{ url_for('inventory.modify_profile') }}">Regresar</a>
+{% endblock %}

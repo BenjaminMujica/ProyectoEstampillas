@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}Modificar Perfil{% endblock %}
+
+{% block content %}
+<h2>Modificar Perfil</h2>
+<ul>
+    <li><a href="{{ url_for('inventory.modify_email') }}">Modificar Correo Electrónico</a></li>
+    <li><a href="{{ url_for('inventory.modify_password') }}">Modificar Contraseña</a></li>
+    <li><a href="{{ url_for('inventory.modify_name') }}">Modificar Nombres</a></li>
+    <li><a href="{{ url_for('inventory.modify_all') }}">Modificar Toda la Información</a></li>
+</ul>
+<a href="{{ url_for('inventory.menu_view') }}">Regresar</a>
+{% endblock %}

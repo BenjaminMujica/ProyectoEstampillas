@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}Menú{% endblock %}
+
+{% block content %}
+<h2>Menú Principal</h2>
+<p>Bienvenido, {{ session['nombre'] }} {{ session['apellido1'] }} {{ session['apellido2'] }}</p>
+<ul>
+    <li><a href="{{ url_for('inventory.consult_inventory') }}">Consultar Inventario</a></li>
+    <li><a href="{{ url_for('inventory.manage_inventory') }}">Gestionar Inventario</a></li>
+    <li><a href="{{ url_for('inventory.modify_profile') }}">Modificar Perfil</a></li>
+    <li><a href="{{ url_for('login.login_view') }}">Cerrar Sesión</a></li>
+</ul>
+{% endblock %}

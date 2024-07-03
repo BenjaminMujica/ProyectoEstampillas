@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+
+{% block title %}Consultar Inventario{% endblock %}
+
+{% block content %}
+<h2>Consultar Inventario</h2>
+<form method="POST" action="{{ url_for('inventory.consult_inventory') }}">
+    <input type="text" name="search" placeholder="Buscar..." required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if results %}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>País</th>
+            <th>Año</th>
+            <th>Condición</th>
+            <th>Valor</th>
+            <th>Dueño ID</th>
+            <th>Cantidad</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.Nombre }}</td>
+            <td>{{ row.Pais }}</td>
+            <td>{{ row.Año }}</td>
+            <td>{{ row.Condicion }}</td>
+            <td>{{ row.ValorReferencial }}</td>
+            <td>{{ row.UsuarioID }}</td>
+            <td>{{ row.Cantidad }}</td>
+            <td><img src="{{ row.ImagenPath }}" alt="Imagen de Estampilla" width="100"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No se encontraron resultados.</p>
+{% endif %}
+
+<a href="{{ url_for('inventory.menu_view') }}">Regresar al Menú</a>
+{% endblock %}

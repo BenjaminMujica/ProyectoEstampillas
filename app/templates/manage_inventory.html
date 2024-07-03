@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block title %}Gestionar Inventario{% endblock %}
+
+{% block content %}
+<h2>Gestionar Inventario</h2>
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('inventory.manage_inventory') }}">
+    <input type="text" name="stamp_id" placeholder="ID de Estampilla" required>
+    <input type="text" name="name" placeholder="Nombre" required>
+    <input type="text" name="country" placeholder="País" required>
+    <input type="text" name="year" placeholder="Año" required>
+    <input type="text" name="condition" placeholder="Condición" required>
+    <input type="text" name="value" placeholder="Valor" required>
+    <input type="file" name="image_path" required>
+    <input type="number" name="quantity" placeholder="Cantidad" required>
+    <button type="submit">Registrar Estampilla</button>
+</form>
+<a href="{{ url_for('inventory.menu_view') }}">Regresar al Menú</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block title %}Modificar Correo Electrónico{% endblock %}
+
+{% block content %}
+<h2>Modificar Correo Electrónico</h2>
+<form method="POST" action="{{ url_for('inventory.modify_email') }}">
+    <input type="email" name="new_email" placeholder="Nuevo Correo Electrónico" required>
+    <button type="submit">Actualizar</button>
+</form>
+<a href="{{ url_for('inventory.modify_profile') }}">Regresar</a>
+{% endblock %}

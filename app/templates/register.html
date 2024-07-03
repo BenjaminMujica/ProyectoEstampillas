@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<h2>Registro</h2>
+<form method="POST">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="text" name="first_name" placeholder="Nombre" required>
+    <input type="text" name="last_name1" placeholder="Apellido Paterno" required>
+    <input type="text" name="last_name2" placeholder="Apellido Materno" required>
+    <button type="submit">Registrar</button>
+</form>
+{% endblock %}

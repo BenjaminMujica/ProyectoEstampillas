@@ -1,0 +1,5 @@
+1. Shift+ClickDerecho en la carpeta "installer"
+2. Selecciona "Abrir la ventana de PowerShell aquí"
+3. Copia, pega y ejecuta el siguiente comando para instalar las dependencias necesarias para el funcionamiento del programa: pip install -r requirements.txt
+--------------------------------------------------
+También puedes ejecutar "auto_install.bat" para hacer instalar todo automáticamente
